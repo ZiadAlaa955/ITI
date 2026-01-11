@@ -44,6 +44,7 @@ Debug/
 Release/
 bin/
 obj/
+SQL Queries/
 
 # --- System ---
 desktop.ini
