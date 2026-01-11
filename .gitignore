@@ -1,6 +1,25 @@
+# --- Media & Docs ---
 *.pdf
 *.png
 *.json
+*.mp4
+*.xlsx
+*.docx
+*.doc
+*.ppt
+*.pptx
+*.htm
+*.xml
+*.txt
+
+# --- Database Files ---
+*.ldf
+*.mdf
+*.ndf
+*.bak
+*.ss
+
+# --- IDE & Build Junk ---
 *.layout
 *.depend
 *.o
@@ -12,6 +31,12 @@
 *.pdb
 *.ilk
 *.tlog
+*.dll
+*.pch
+*.bmarks
+*.sqlproj.user
+
+# --- Folders ---
 x64/
 x86/
 .vs/
@@ -19,11 +44,7 @@ Debug/
 Release/
 bin/
 obj/
+
+# --- System ---
 desktop.ini
 Thumbs.db
-*.dll
-*.pch
-*.bmarks
-*.sln
-*.cbp
-*.mp4
