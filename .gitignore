@@ -2,6 +2,7 @@
 *.pdf
 *.png
 *.jpg
+*.svg
 *.gif
 *.json
 *.mp4
@@ -14,6 +15,8 @@
 *.htm
 *.xml
 *.txt
+*.rar
+*.md
 
 # --- Database Files ---
 *.ldf
