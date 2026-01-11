@@ -1,6 +1,6 @@
-.pdf
-.png
-.json
+*.pdf
+*.png
+*.json
 *.layout
 *.depend
 *.o
@@ -26,3 +26,4 @@ Thumbs.db
 *.bmarks
 *.sln
 *.cbp
+*.mp4
