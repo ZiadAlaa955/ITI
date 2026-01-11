@@ -1,8 +1,11 @@
 # --- Media & Docs ---
 *.pdf
 *.png
+*.jpg
+*.gif
 *.json
 *.mp4
+*.mp3
 *.xlsx
 *.docx
 *.doc
