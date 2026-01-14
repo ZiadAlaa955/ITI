@@ -14,16 +14,20 @@ let linkedListObj = {
       throw "this value cannot be pushed";
     }
   },
-  Insert: function (x) {
+  Insert: function (x, pos) {
     if (this.data.length == 0) {
       this.data.push({ val: x });
     } else {
       let isInserted = false;
       for (let i = 0; i < this.data.length; i++) {
         if (this.data[i].val > x) {
-          this.data.splice(i, 0, { val: x });
-          isInserted = true;
-          break;
+          if (pos == i + 1) {
+            this.data.splice(i, 0, { val: x });
+            isInserted = true;
+            break;
+          } else {
+            throw "This is a duplicated value";
+          }
         } else if (this.data[i].val < x) {
           continue;
         } else if (this.data[i].val == x) {
@@ -61,10 +65,7 @@ let linkedListObj = {
   },
 };
 
-linkedListObj.Insert(9);
 linkedListObj.push(10);
 linkedListObj.Enqueue(1);
-linkedListObj.Pop();
-linkedListObj.Dequeue();
-linkedListObj.Remove(4);
+linkedListObj.Insert(3, 3);
 linkedListObj.DiplayAll();

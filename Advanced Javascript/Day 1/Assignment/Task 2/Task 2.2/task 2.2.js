@@ -1,21 +1,23 @@
-let obj = {
+var obj = {
   id: "10",
   Location: "asdas",
   address: "asdsa",
   getSetGen: function () {
-    let objLength = Object.keys(this).length;
-    for (let i = 0; i < objLength; i++) {
-      let propertyName = Object.keys(this)[i];
+    var objLength = Object.keys(this).length;
+    for (var i = 0; i < objLength; i++) {
+      var propertyName = Object.keys(this)[i];
       if (typeof this[propertyName] == "function") {
         continue;
       } else {
-        this[propertyName + "Getter"] = function () {
-          return this[propertyName];
-        };
-        this[propertyName + "Setter"] = function (propertyValue) {
-          this[propertyName] = propertyValue;
-          return true;
-        };
+        (function (propertyName) {
+          this[propertyName + "Getter"] = function () {
+            return this[propertyName];
+          };
+          this[propertyName + "Setter"] = function (propertyValue) {
+            this[propertyName] = propertyValue;
+            return true;
+          };
+        }).call(this, propertyName);
       }
     }
     console.log("Getters & setters generated successfully...");
@@ -23,6 +25,5 @@ let obj = {
 };
 
 obj.getSetGen();
-console.log(Object.keys(obj));
 console.log(obj["idSetter"](20));
 console.log(obj["idGetter"]());
