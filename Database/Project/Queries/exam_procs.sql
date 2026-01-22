@@ -43,7 +43,6 @@ end
 -----------Generate_Exam-----------
 create proc Generate_Exam @CrsName varchar(50), @ExamDuration int, @NoOfMCQs int, @NoOfTFs int,
 @ExamID int output
-
 as 
     declare @CrsID int
     select @CrsID = c.Course_ID from Course c
@@ -67,11 +66,70 @@ as
     order by NEWID()
 
     insert into Exam_Question(Exam_ID,Question_ID)
-    select top(@NoOfMCQs) @ExamID, q.Question_ID
+    select top(@NoOfTFs) @ExamID, q.Question_ID
     from Question q
     where q.Crs_ID = @CrsID and q.Q_Type = 'TF'
     order by NEWID()
 
-declare @ExamID
-Generate_Exam @CrsName = "C++ Programming", @ExamDuration = 60 , @NoOfMCQs = 3 ,@NoOfTFs = 3 , @ExamID = @ExamID output
+declare @ExmID int
+exec Generate_Exam @CrsName = "C++ Programming", @ExamDuration = 60 , @NoOfMCQs = 3 ,@NoOfTFs = 3 , @ExamID = @ExmID output
 drop proc Generate_Exam
+
+--Exam table (read & delete)--------------------
+create proc select_all_exams
+as
+begin
+	select e.Exam_ID, e.Exam_Duration_mins,c.Course_Name
+	from exam e join course c 
+	on e.Crs_ID = c.Course_ID
+end
+
+create proc select_exam_by_ID
+@examID int
+as
+begin
+	select * from exam 
+	where Exam_ID = @examID
+end
+
+--delete exam with its questions and student answers
+create proc delete_exam
+@examID int
+as
+begin
+	begin try
+		begin transaction
+			delete from Student_Exam_Answer where Exam_ID = @examID
+			delete from Exam_Question where Exam_ID = @examID
+			delete from exam where Exam_ID = @examID
+		commit transaction
+	end try
+	begin catch 
+		rollback transaction
+		select 'Error: cannot delete this exam because it referenced elsewhere' as errorMessage
+	end catch
+end
+
+--exam_questions_by_id -----------------------
+create proc select_exam_questions_by_examID
+@examID int
+as
+begin
+	select q.Question_ID, q.Q_Description, q.Q_Type, q.Mark
+	from Exam_Question eq join Question q 
+	on eq.Question_ID = q.Question_ID
+	where eq.Exam_ID = @examID
+end
+
+
+--student_exam_answers table (read & delete)--------------------
+create proc select_student_exam_answers
+@examID int, @studentID int 
+as
+begin
+	select q.Q_Description, sea.Stud_Answer, q.Model_Answer, q.Mark 
+	from Student_Exam_Answer sea join Question q
+	on sea.Q_ID = q.Question_ID
+	where sea.Exam_ID = @examID AND sea.Student_ID = @studentID
+end
+
