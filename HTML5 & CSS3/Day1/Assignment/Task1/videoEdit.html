@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="videoEdit.css" />
+  </head>
+  <body>
+    <video src="frozen.mp4" width="700" id="videoId"></video>
+    <br /><br />
+    <input type="range" id="videoLength" value="0" />
+    <label for="videoLength" id="videoLabel">0</label>
+    <br /><br />
+    <input type="button" value="play" id="play" />
+    <input type="button" value="Stop" id="stop" />
+    <input type="button" value="<<" id="back10" />
+    <input type="button" value="<" id="back5" />
+    <input type="button" value=">" id="forward5" />
+    <input type="button" value=">>" id="forward10" />
+    <br /><br />
+    <input type="range" id="volume" value="0" min="0" max="1" step="0.1" />
+    <input type="button" value="Mute" id="mute" />
+    <br /><br />
+    <label for="speed">Speed</label>
+    <input type="range" id="speed" value="0" min="0" max="1" step="0.1" />
+    <script src="videoEdit.js"></script>
+  </body>
+</html>
