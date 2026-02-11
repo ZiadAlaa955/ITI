@@ -43,6 +43,7 @@
 *.sqlproj.user
 
 # --- Folders ---
+practice/
 x64/
 x86/
 .vs/
@@ -52,6 +53,8 @@ bin/
 obj/
 SQL Queries/
 Ignore It/
+bootstrap-5.3.8-dist/
+Capstone project/
 
 # --- System ---
 desktop.ini
