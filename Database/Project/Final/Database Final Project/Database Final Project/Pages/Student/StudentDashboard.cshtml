@@ -1,0 +1,71 @@
+﻿@page
+@model Database_Final_Project.Pages.Student.StudentDashboardModel
+@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-5 border-bottom pb-3">
+        <h1 class="fw-bold text-primary">Welcome! @Model.CurrentStudent.StudentName! 🧑‍🎓 </h1>
+        <div class="d-flex align-items-center">
+            <span class="badge bg-info text-dark p-2 me-2">Student Portal</span>
+            <a asp-page="/Index" class="btn btn-outline-secondary btn-sm">Logout</a>
+        </div>
+    </div>
+
+    <h3 class="mb-4">My Courses</h3>
+    <div class="row g-4">
+        @foreach (var course in Model.EnrolledCourses)
+        {
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 transition-hover">
+                    <div class="card-body text-center d-flex flex-column align-items-center justify-content-center py-5">
+                        <div class="rounded-circle bg-primary text-white mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <i class="bi bi-book-half fs-3"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">@course.CourseName</h5>
+                        <a asp-page="/Student/TakeExam"
+                           asp-route-courseId="@course.CourseId"
+                           class="btn btn-primary mt-3 w-100 stretched-link">
+                            Enter Exam
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="mt-5 pt-5">
+        <div class="card bg-light border-0 shadow-sm">
+            <div class="card-header bg-dark text-white fw-bold">Personal Information</div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-3 border-end">
+                        <p class="text-muted mb-1">Track</p>
+                        <h6 class="fw-bold">@(Model.CurrentStudent.Track?.TrackName ?? "No Track")</h6>
+                    </div>
+                    <div class="col-md-3 border-end">
+                        <p class="text-muted mb-1">Phone</p>
+                        <h6 class="fw-bold">@Model.CurrentStudent.PhoneNumber</h6>
+                    </div>
+                    <div class="col-md-3 border-end">
+                        <p class="text-muted mb-1">City</p>
+                        <h6 class="fw-bold">@Model.CurrentStudent.City</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="text-muted mb-1">Street</p>
+                        <h6 class="fw-bold">@Model.CurrentStudent.Street</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .transition-hover:hover {
+        transform: translateY(-5px);
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+</style>

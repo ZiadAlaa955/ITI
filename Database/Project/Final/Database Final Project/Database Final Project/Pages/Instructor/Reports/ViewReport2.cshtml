@@ -1,0 +1,116 @@
+﻿@page "{id:int}"
+@using System.Data
+@model Database_Final_Project.Pages.Instructor.Reports.ViewReport2Model
+@{
+    ViewData["Title"] = "Grade Report Preview";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between mb-4 no-print">
+        <a asp-page="/Instructor/InstructorDashboard" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+        @if (string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <button onclick="window.print()" class="btn btn-primary">
+                <i class="bi bi-printer"></i> Export to PDF
+            </button>
+        }
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-danger shadow border-start border-4 border-danger">
+            <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill me-2"></i>Validation Error</h4>
+            <p class="mb-0">@Model.ErrorMessage</p>
+        </div>
+    }
+    else
+    {
+        <div class="report-paper mx-auto shadow-lg p-5 mb-5 bg-white border">
+            <div class="text-center mb-5 border-bottom pb-4">
+                <h1 class="fw-bold text-primary">STUDENT TRANSCRIPT</h1>
+                <p class="text-muted mb-0">Official Grade Report</p>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-6">
+                    <p class="mb-1 text-muted small text-uppercase">Student Information</p>
+                    <h5 class="fw-bold">@Model.StudentName</h5>
+                    <p class="mb-0 text-muted">ID: @Model.StudentId</p>
+                </div>
+                <div class="col-6 text-end">
+                    <p class="mb-1 text-muted small text-uppercase">Report Date</p>
+                    <p class="fw-bold mb-0">@DateTime.Now.ToString("dd/MM/yyyy")</p>
+                </div>
+            </div>
+
+            <table class="table table-bordered align-middle">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th style="width: 20%;">Course ID</th>
+                        <th style="width: 50%;">Course Name</th>
+                        <th style="width: 30%;" class="text-center">Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.GradesTable.Rows.Count > 0)
+                    {
+                        @foreach (DataRow row in Model.GradesTable.Rows)
+                        {
+                            <tr>
+                                <td>@row["Course_ID"]</td>
+                                <td class="fw-bold">@row["Course_Name"]</td>
+                                <td class="text-center">
+                                    <span class="@(row["Grade"].ToString() == "Not graded yet" ? "text-muted italic" : "fw-bold")">
+                                        @row["Grade"]
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3" class="text-center py-4 text-muted">
+                                No courses assigned to this student.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+<style>
+    .report-paper {
+        max-width: 850px;
+        min-height: 1100px;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    @@media print {
+        .no-print {
+            display: none !important;
+        }
+
+        .report-paper {
+            box-shadow: none !important;
+            border: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+
+        body {
+            background-color: white !important;
+        }
+    }
+
+    body {
+        background-color: #f0f2f5;
+    }
+</style>

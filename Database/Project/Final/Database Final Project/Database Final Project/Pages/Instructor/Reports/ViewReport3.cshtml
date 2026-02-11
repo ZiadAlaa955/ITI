@@ -1,0 +1,108 @@
+﻿@page "{id:int}"
+@model Database_Final_Project.Pages.Instructor.Reports.ViewReport3Model
+@{
+    ViewData["Title"] = "Instructor Course Report";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between mb-4 no-print">
+        <a asp-page="/Instructor/InstructorDashboard" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+        @if (string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <button onclick="window.print()" class="btn btn-success shadow">
+                <i class="bi bi-printer"></i> Print Report
+            </button>
+        }
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-danger shadow border-start border-4 border-danger">
+            <h4 class="alert-heading"><i class="bi bi-exclamation-octagon-fill me-2"></i>Validation Error</h4>
+            <p class="mb-0">@Model.ErrorMessage</p>
+        </div>
+    }
+    else
+    {
+        <div class="report-paper mx-auto shadow-lg p-5 mb-5 bg-white border">
+
+            <div class="row mb-5 border-bottom pb-4 align-items-center">
+                <div class="col-7">
+                    <h2 class="fw-bold text-success mb-0">INSTRUCTOR WORKLOAD</h2>
+                    <p class="text-muted">Courses & Student Enrollment Summary</p>
+                </div>
+                <div class="col-5 text-end">
+                    <div class="p-2 border rounded bg-light">
+                        <p class="mb-0 small text-muted">Instructor Name</p>
+                        <h6 class="fw-bold mb-0">@Model.InstructorName</h6>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-hover border">
+                <thead class="bg-success text-white text-center">
+                    <tr>
+                        <th class="text-start" style="width: 70%;">Assigned Course Name</th>
+                        <th style="width: 30%;">Total Students Enrolled</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    @if (Model.CourseData.Any())
+                    {
+                        @foreach (var row in Model.CourseData)
+                        {
+                            <tr>
+                                <td class="text-start fw-bold">@row.Name</td>
+                                <td>
+                                    <span class="badge rounded-pill bg-light text-dark border p-2 px-3">
+                                        @row.StudentCount Students
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="2" class="text-center py-4 text-muted">No courses found for this instructor.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="mt-5 pt-5 text-end">
+                <p class="small text-muted border-top pt-2">Generated on: @DateTime.Now.ToString("F")</p>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .report-paper {
+        max-width: 850px;
+        min-height: 1100px;
+    }
+
+    @@media print {
+        .no-print {
+            display: none !important;
+        }
+
+        .report-paper {
+            box-shadow: none !important;
+            border: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+
+        body {
+            background-color: white !important;
+        }
+    }
+
+    body {
+        background-color: #f8faf9;
+    }
+</style>

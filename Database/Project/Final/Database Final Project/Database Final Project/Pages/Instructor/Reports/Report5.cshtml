@@ -1,0 +1,30 @@
+﻿@page
+@model Database_Final_Project.Pages.Instructor.Reports.Report5Model
+@{
+    ViewData["Title"] = "Report 05 - Print Exam";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-header bg-info text-dark p-3">
+                    <h5 class="mb-0"><i class="bi bi-printer-fill me-2"></i>Report 05: Print Exam Paper</h5>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <p class="text-muted">Enter the Exam ID to generate a formatted question paper with all MCQ/TF options.</p>
+                    <form method="post">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-info text-dark">Exam ID</label>
+                            <input type="number" name="examId" class="form-control form-control-lg text-center border-info" placeholder="e.g. 1005" required />
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-info btn-lg shadow-sm fw-bold">Generate Exam Paper</button>
+                            <a asp-page="/Instructor/InstructorDashboard" class="btn btn-outline-secondary">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

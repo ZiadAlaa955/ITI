@@ -1,0 +1,34 @@
+﻿@page
+@model Database_Final_Project.Pages.Instructor.Reports.Report6Model
+@{
+    ViewData["Title"] = "Report 06 - Student Answers";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-header bg-dark text-white p-3">
+                    <h5 class="mb-0"><i class="bi bi-check-all me-2"></i>Report 06: Student Exam Answers</h5>
+                </div>
+                <div class="card-body p-4">
+                    <p class="text-muted text-center">Enter both IDs to review a student's specific answers and grades for an exam.</p>
+                    <form method="post">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Exam ID</label>
+                            <input type="number" name="examId" class="form-control border-dark" placeholder="e.g. 100" required />
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Student ID</label>
+                            <input type="number" name="studentId" class="form-control border-dark" placeholder="e.g. 501" required />
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-dark btn-lg shadow-sm">Review Answers</button>
+                            <a asp-page="/Instructor/InstructorDashboard" class="btn btn-outline-secondary">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

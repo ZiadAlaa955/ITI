@@ -1,0 +1,30 @@
+﻿@page
+@model Database_Final_Project.Pages.Instructor.Reports.Report3Model
+@{
+    ViewData["Title"] = "Report 03 - Instructor Courses";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-header bg-success text-white p-3">
+                    <h5 class="mb-0"><i class="bi bi-journal-bookmark-fill me-2"></i>Report 03: Courses & Enrollment</h5>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <p class="text-muted">Enter an Instructor ID to view their assigned courses and total student counts.</p>
+                    <form method="post">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-success">Instructor ID</label>
+                            <input type="number" name="instructorId" class="form-control form-control-lg text-center border-success" placeholder="e.g. 101" required />
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg shadow-sm">Generate Course Report</button>
+                            <a asp-page="/Instructor/InstructorDashboard" class="btn btn-outline-secondary">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

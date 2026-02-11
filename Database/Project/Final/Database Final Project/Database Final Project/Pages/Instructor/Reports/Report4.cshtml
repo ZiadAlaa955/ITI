@@ -1,0 +1,30 @@
+﻿@page
+@model Database_Final_Project.Pages.Instructor.Reports.Report4Model
+@{
+    ViewData["Title"] = "Report 04 - Course Topics";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-0">
+                <div class="card-header bg-warning text-dark p-3">
+                    <h5 class="mb-0"><i class="bi bi-tags-fill me-2"></i>Report 04: Course Topics</h5>
+                </div>
+                <div class="card-body p-4 text-center">
+                    <p class="text-muted">Enter a Course ID to retrieve the full list of topics assigned to that course.</p>
+                    <form method="post">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-warning text-dark">Course ID</label>
+                            <input type="number" name="courseId" class="form-control form-control-lg text-center border-warning" placeholder="e.g. 10" required />
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-warning btn-lg shadow-sm fw-bold">Generate Topics List</button>
+                            <a asp-page="/Instructor/InstructorDashboard" class="btn btn-outline-secondary">Back</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

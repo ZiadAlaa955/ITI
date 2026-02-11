@@ -1,0 +1,59 @@
+﻿@page
+@model Database_Final_Project.Pages.Instructor.GenerateExamModel
+@{
+    ViewData["Title"] = "Configure Exam";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-warning alert-dismissible fade show shadow-sm mb-4 border-start border-4 border-warning" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <strong>Configuration Error:</strong> @Model.ErrorMessage
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            <div class="card shadow border-0">
+                <div class="card-header bg-danger text-white py-3 text-center">
+                    <h4 class="mb-0">Generate Exam</h4>
+                    <span class="badge bg-white text-danger mt-2">@Model.CourseName</span>
+                </div>
+                <div class="card-body p-4">
+                    <form method="post">
+                        <input type="hidden" asp-for="CourseName" />
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold"><i class="bi bi-clock me-2"></i>Duration (Minutes)</label>
+                            <input type="number" name="duration" class="form-control" placeholder="e.g., 60" min="1" max="300" required />
+                            <div class="form-text">Maximum recommended: 300 minutes.</div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <label class="form-label fw-bold"><i class="bi bi-list-check me-2"></i>MCQ Count</label>
+                                <input type="number" name="mcqs" class="form-control" value="5" min="0" required />
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label fw-bold"><i class="bi bi-toggle-on me-2"></i>TF Count</label>
+                                <input type="number" name="tfs" class="form-control" value="5" min="0" required />
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-danger btn-lg shadow-sm">
+                                <i class="bi bi-cpu-fill me-2"></i>Generate Random Exam
+                            </button>
+                            <a asp-page="/Instructor/InstructorDashboard" class="btn btn-link text-muted">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

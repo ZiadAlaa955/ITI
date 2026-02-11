@@ -4,16 +4,28 @@ use DB_project
 
 create proc Report_Get_Students_By_Track @TrackID int
 as 
+    if not exists (select * from Track where Track_ID = @TrackID)
+    begin
+        select 'Error: Track ID ' + cast(@TrackID as varchar(10)) + ' does not exist.' as ErrorMessage
+        return
+    end
 	select s.* from Student s, Track t
 	where t.Track_ID = s.Track_ID and t.Track_ID = @TrackID
 
 Report_Get_Students_By_Track @TrackID = 1
 drop proc Report_Get_Students_By_Track
 
+
+
 -----------Report that takes the student ID and returns the grades of the student in all courses. %-----------
 
 create proc Report_Get_Student_Grades @StudentID int
 as	
+    if not exists (select * from Student where Student_ID = @StudentID)
+    begin
+        select 'Error: Student ID ' + cast(@StudentID as varchar(10)) + ' does not exist.' as ErrorMessage
+        return
+    end
 	select c.Course_ID, c.Course_Name , isnull(cast(sc.Grade as varchar(20)), 'Not graded yet') as Grade
 	from Student_Course sc, Course c
 	where c.Course_ID = sc.Crs_ID and sc.Student_ID = @StudentID
@@ -21,12 +33,19 @@ as
 Report_Get_Student_Grades @StudentID = 1
 drop proc Report_Get_Student_Grades
 
+
+
 -----------Report that takes the instructor ID and returns the name of the courses that he teaches and the number of student per course.-----------
 
 create proc Report_Get_Instructor_courses_AND_Count
 @instructorID int
 as
 begin
+    if not exists (select * from Instructor where Ins_ID = @instructorID)
+    begin
+        select 'Error: Instructor ID ' + cast(@instructorID as varchar(10)) + ' does not exist.' as ErrorMessage
+        return
+    end
     select c.Course_Name, count(sc.Student_ID)
     from instructor i join instructor_course ic
     on i.Ins_ID = ic.Ins_ID
@@ -41,12 +60,19 @@ end
 Report_Get_Instructor_courses_AND_Count @instructorID = 1
 drop proc Report_Get_Instructor_courses_AND_Count
 
+
+
 -----------Report that takes course ID and returns its topics  -----------
 
 create proc Report_get_Course_Topics
 @courseID int
 as
 begin
+    if not exists (select * from Course where Course_ID = @courseID)
+    begin
+        select 'Error: Course ID ' + cast(@courseID as varchar(10)) + ' does not exist.' as ErrorMessage
+        return
+    end
     select c.Course_ID, t.Topic_Name
     from course c join topic t
     on c.course_ID = t.course_ID
@@ -60,6 +86,11 @@ drop proc Report_get_Course_Topics
 
 create proc Report_Get_Exam_Questions @ExamID int
 as
+    if not exists (select * from Exam where Exam_ID = @ExamID)
+    begin
+        select 'Error: Exam ID ' + cast(@ExamID as varchar(10)) + ' does not exist.' as ErrorMessage
+        return
+    end
 	select q.Q_Description,q.Q_Type,q.Mark, string_agg(qa.Q_Ans_Option, ' | ') as Options
     from Exam_Question eq, Question q , Question_Answer_Options qa
     where eq.Question_ID = q.Question_ID and q.Question_ID = qa.Question_ID
@@ -69,10 +100,29 @@ as
 Report_Get_Exam_Questions @ExamID = 1
 drop proc Report_Get_Exam_Questions
 
+
+
 -----------Report that takes exam number and the student ID then returns the Questions in this exam with the student answers.-----------
 
 create proc Report_Get_Students_Exam_Answers @ExamID int, @StudentID int
 as
+    if not exists (select * from Exam where Exam_ID = @ExamID)
+    begin
+        select 'Error: Exam ID ' + cast(@ExamID as varchar(10)) + ' does not exist' as ErrorMessage
+        return
+    end
+
+    if not exists (select * from Student where Student_ID = @StudentID)
+    begin
+        select 'Error: Student ID ' + cast(@StudentID as varchar(10)) + ' does not exist' as ErrorMessage
+        return
+    end
+    
+    if not exists (select * from Student_Exam_Answer where Student_ID = @StudentID AND Exam_ID = @ExamID)
+    begin
+        select 'Error: No answers found. This student did not take this exam' as ErrorMessage
+        return
+    end
 	select q.Q_Description,sa.Stud_Answer ,q.Model_Answer,sa.Grade, q.Mark
     from Student_Exam_Answer sa, Question q 
     where sa.Q_ID = q.Question_ID and sa.Exam_ID = @ExamID and sa.Student_ID = @StudentID

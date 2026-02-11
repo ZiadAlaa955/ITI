@@ -1,0 +1,36 @@
+﻿@page
+@model Database_Final_Project.Pages.Student.LoginModel
+@{
+    ViewData["Title"] = "Student Login";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow-lg border-0" style="width: 400px;">
+        <div class="card-header bg-primary text-white text-center py-4">
+            <i class="bi bi-mortarboard fs-1"></i>
+            <h3 class="mt-2">Student Login</h3>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" asp-for="StudentName" class="form-control" placeholder="Enter name as in database" required />
+                </div>
+
+                @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                {
+                    <div class="alert alert-danger py-2 small">
+                        @Model.ErrorMessage
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-primary w-100 py-2 shadow-sm">
+                    Login
+                </button>
+            </form>
+        </div>
+        <div class="card-footer text-center py-3">
+            <a asp-page="/Index" class="text-muted small text-decoration-none">← Back to Gateway</a>
+        </div>
+    </div>
+</div>

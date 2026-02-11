@@ -1,0 +1,41 @@
+﻿@page
+@model Database_Final_Project.Pages.Student.ExamResultModel
+@{
+    ViewData["Title"] = "Your Grade";
+    // Basic pass/fail logic (50%)
+    double percent = Model.Total > 0 ? ((double)Model.Score / Model.Total) * 100 : 0;
+    bool passed = percent >= 50;
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <div class="card shadow border-0 p-5" style="border-radius: 30px;">
+
+                <h4 class="text-muted mb-4">Exam Submission Successful</h4>
+
+                <div class="py-4">
+                    <span class="display-1 fw-bold text-@(passed ? "success" : "danger")">@Model.Score</span>
+                    <span class="display-3 text-muted"> / </span>
+                    <span class="display-3 text-muted">@Model.Total</span>
+                </div>
+
+                <div class="mb-4">
+                    <h2 class="fw-bold @(passed ? "text-success" : "text-danger")">
+                        @(passed ? "PASSED" : "FAILED")
+                    </h2>
+                    <p class="fs-5 text-muted">Percentage: @percent.ToString("0.0")%</p>
+                </div>
+
+                <div class="progress mb-4" style="height: 12px; border-radius: 10px;">
+                    <div class="progress-bar bg-@(passed ? "success" : "danger")" role="progressbar"
+                         style="width: @percent%"></div>
+                </div>
+                <hr>
+                <div class="d-grid mt-4">
+                    <a asp-page="/Student/StudentDashboard" class="btn btn-outline-dark btn-lg">Return to My Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
