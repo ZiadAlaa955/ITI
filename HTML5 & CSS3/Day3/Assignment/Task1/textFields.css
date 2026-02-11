@@ -1,0 +1,20 @@
+[type = "text"], [type = "email"]{
+    border: 2px solid red;
+    border-radius: 3px;
+}
+
+[type = "text"]+div, [type = "email"]+div{
+    color: gray;
+}
+
+input:valid{
+    border:2px solid black;
+    border-radius: 3px;
+}
+
+input:valid+div{
+    visibility: hidden;
+}
+input:invalid+div{
+    display: block;
+}

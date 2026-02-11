@@ -1,0 +1,61 @@
+div {
+  border: 5px solid red;
+  border-radius: 20px;
+  width: 240px;
+  height: 400px;
+  position: relative;
+}
+
+#triangle {
+  position: absolute;
+  top: 175px;
+  left: 100px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 70px solid black;
+}
+
+#heart {
+  position: absolute;
+  top: 130px;
+  left: 70px;
+  width: 100px;
+  height: 90px;
+  transform: rotate(180deg);
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: black;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+#letter1,
+#letter2 {
+  font-family: "Times New Roman";
+  font-size: 70px;
+}
+
+#letter1 {
+  position: absolute;
+  left: 10px;
+}
+#letter2 {
+  position: absolute;
+  left: 175px;
+  top: 310px;
+}

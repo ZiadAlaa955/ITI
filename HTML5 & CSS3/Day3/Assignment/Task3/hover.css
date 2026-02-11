@@ -1,0 +1,19 @@
+body{
+   height: 100vh;
+}
+div{
+    background-color: #CCDDEE;
+    margin: auto;
+    width: 150px;
+    border: 2px #666EF7 solid;
+    border-radius: 50px;
+    padding: 10px 50px;
+    margin-top:100px ;
+    text-align: center;
+    font-weight: bold;
+}
+div:hover{
+    box-shadow: 0px 0px 10px 6px #666EF7;
+    background-color: #FCDDEE;
+    transition: all 2s;
+}

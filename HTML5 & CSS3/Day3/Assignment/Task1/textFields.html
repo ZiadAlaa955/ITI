@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="textFields.css" />
+  </head>
+  <body>
+    <form action="get">
+      <h1>Change Email Address</h1>
+      <input
+        type="text"
+        required
+        name="username"
+        placeholder="UserName"
+        id="name"
+      />
+      <div>
+        The required user name may only be a series of alphapetical characters
+      </div>
+      <br />
+      <input type="email" required name="email" placeholder="Email" id="mail" />
+      <div>
+        The required email may be not include any special characters other than
+        '@' sign
+      </div>
+      <br />
+      <input type="submit" value="change" />
+    </form>
+  </body>
+</html>

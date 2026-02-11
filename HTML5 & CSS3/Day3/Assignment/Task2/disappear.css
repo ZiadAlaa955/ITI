@@ -1,0 +1,15 @@
+img:hover{
+animation-name: disappear;
+animation-duration: 3s;
+animation-direction:alternate;
+animation-iteration-count: infinite;
+}
+
+@keyframes disappear{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
