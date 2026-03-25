@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Assignment/EmployeesGridView.csproj" />
+  <Project Path="DetailedView/DetailedView.csproj" />
+</Solution>
