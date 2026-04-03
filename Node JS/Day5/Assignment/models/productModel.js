@@ -1,0 +1,28 @@
+import mongoose, { Schema } from "mongoose";
+
+const productSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      minlength: [3, "name must be at least 3 characters"],
+      maxlength: [30, "name must be at most 30 characters"],
+      trim: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+      min: 10,
+      max: 1000000,
+    },
+    category: {
+      type: Schema.Types.ObjectId,
+      ref: "category",
+      require: true,
+    },
+  },
+  { timestamps: true },
+);
+const productModel = mongoose.model("product", productSchema);
+
+export default productModel;
