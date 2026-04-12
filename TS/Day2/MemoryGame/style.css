@@ -1,0 +1,76 @@
+body {
+  background-image: url("assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  background-color: rgb(255, 255, 255, 0.3);
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.progress-track {
+  height: 30px;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 5px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  transition: whidth 0.4s ease-out;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+}
+
+.card {
+  height: 130px;
+  width: 100px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  padding-top: 15px;
+}
+
+.card-face {
+  position: absolute;
+  height: 130px;
+  width: 100px;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+  background-color: white;
+  object-fit: contain;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
