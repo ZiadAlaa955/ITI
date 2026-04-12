@@ -67,7 +67,6 @@ namespace Assignmint2
         public double FoodCost { get; set; }
         private void FinalizePayment_Load(object sender, EventArgs e)
         {
-            // 1. Fill the dropdowns (your existing code)
             cmbPaymentType.Items.AddRange(new string[] { "Credit Card", "Debit Card", "PayPal", "Apple Pay", "Google Pay" });
             cmbMonth.Items.AddRange(new string[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" });
             int currentYear = DateTime.Now.Year;
@@ -76,13 +75,10 @@ namespace Assignmint2
                 cmbYear.Items.Add(i.ToString().Substring(2));
             }
 
-            // 2. CALCULATE THE TOTALS
             double currentBill = ReservationCost + FoodCost;
-            double taxAmount = currentBill * 0.10; // Assuming a 10% tax rate
+            double taxAmount = currentBill * 0.10; 
             double totalBill = currentBill + taxAmount;
 
-            // 3. UPDATE THE LABELS
-            // The "0.00" forces it to look like real money (e.g. $150.00 instead of $150)
             lblValRes.Text = "$" + ReservationCost.ToString("0.00");
             lblValFood.Text = "$" + FoodCost.ToString("0.00");
             lblValCurrent.Text = "$" + currentBill.ToString("0.00");

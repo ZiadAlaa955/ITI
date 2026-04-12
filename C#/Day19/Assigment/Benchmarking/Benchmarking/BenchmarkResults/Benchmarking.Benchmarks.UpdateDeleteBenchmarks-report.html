@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Benchmarking.Benchmarks.UpdateDeleteBenchmarks-20260327-154032</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.8037/25H2/2025Update/HudsonValley2)
+Intel Core i5-8250U CPU 1.60GHz (Max: 1.80GHz) (Kaby Lake R), 1 CPU, 8 logical and 4 physical cores
+.NET SDK 10.0.201
+  [Host]     : .NET 10.0.5 (10.0.5, 10.0.526.15411), X64 RyuJIT x86-64-v3
+  Job-ARDWEO : .NET 10.0.5 (10.0.5, 10.0.526.15411), X64 RyuJIT x86-64-v3
+</code></pre>
+<pre><code>InvocationCount=1  IterationCount=5  UnrollFactor=1  
+WarmupCount=2  
+</code></pre>
+
+<table>
+<thead><tr><th>Method </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>EF_Update</td><td>2.689 ms</td><td>0.6015 ms</td><td>0.0931 ms</td><td>153.99 KB</td>
+</tr><tr><td>Dapper_Update</td><td>1.115 ms</td><td>0.3204 ms</td><td>0.0832 ms</td><td>3.15 KB</td>
+</tr><tr><td>ADO_Update</td><td>1.138 ms</td><td>0.1746 ms</td><td>0.0453 ms</td><td>3.03 KB</td>
+</tr><tr><td>EF_Delete</td><td>2.600 ms</td><td>0.4430 ms</td><td>0.0686 ms</td><td>150.45 KB</td>
+</tr><tr><td>Dapper_Delete</td><td>1.056 ms</td><td>0.2577 ms</td><td>0.0669 ms</td><td>2.84 KB</td>
+</tr><tr><td>ADO_Delete</td><td>1.121 ms</td><td>0.3013 ms</td><td>0.0783 ms</td><td>2.73 KB</td>
+</tr></tbody></table>
+</body>
+</html>

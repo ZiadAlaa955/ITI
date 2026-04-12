@@ -6,8 +6,6 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using Assignment2;
 
-// Adjust the namespace below to match your project exactly! 
-// Assignment2 vs Assignmint2
 namespace Assignmint2
 {
     public partial class FoodMenu : Form
@@ -24,13 +22,10 @@ namespace Assignmint2
         {
             InitializeComponent();
 
-            // Load the beautiful food icons directly from the Resources file you just set up!
-            // Note: If you named the project "Assignment2", change Assignmint2 below!
             if (Assignment2.Properties.Resources.breakfast != null) picBreakfast.Image = Assignment2.Properties.Resources.breakfast;
             if (Assignment2.Properties.Resources.lunch_new_png != null) picLunch.Image = Assignment2.Properties.Resources.lunch_new_png;
             if (Assignment2.Properties.Resources.Dinner_new_png != null) picDinner.Image = Assignment2.Properties.Resources.Dinner_new_png;
 
-            // Set placeholders
             AddPlaceholderManager(txtQtyBreakfast, "Quantity ?");
             AddPlaceholderManager(txtQtyLunch, "Quantity ?");
             AddPlaceholderManager(txtQtyDinner, "Quantity ?");
@@ -91,7 +86,6 @@ namespace Assignmint2
             NeedsTowels = chkTowels.Checked;
             NeedsSurprise = chkSurprise.Checked;
 
-            // 2. Safely grab the quantities (If it's checked but they didn't type a number, default to 1)
             int bQty;
             BreakfastQty = (HasBreakfast && int.TryParse(txtQtyBreakfast.Text, out bQty)) ? bQty : (HasBreakfast ? 1 : 0);
 
@@ -101,7 +95,6 @@ namespace Assignmint2
             int dQty;
             DinnerQty = (HasDinner && int.TryParse(txtQtyDinner.Text, out dQty)) ? dQty : (HasDinner ? 1 : 0);
 
-            // 3. Send the Thumbs Up signal back to Frontend and close
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

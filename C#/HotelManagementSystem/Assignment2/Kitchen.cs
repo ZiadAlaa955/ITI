@@ -18,21 +18,17 @@ namespace Assignment2
         {
             InitializeComponent();
 
-            // ==========================================
-            // DYNAMIC LOGOUT BUTTON
-            // ==========================================
             Button btnLogout = new Button();
             btnLogout.Text = "Log Out";
             btnLogout.Size = new Size(120, 40);
-            btnLogout.Location = new Point(850, 10); // Places it neatly at the top right of the Kitchen
-            btnLogout.BackColor = Color.Crimson; // Professional Red color
+            btnLogout.Location = new Point(850, 10); 
+            btnLogout.BackColor = Color.Crimson; 
             btnLogout.ForeColor = Color.White;
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnLogout.Cursor = Cursors.Hand;
             btnLogout.Click += (s, e) => {
-                // Return to Login screen
                 Assignment2.Login loginForm = new Assignment2.Login();
                 loginForm.Show();
                 this.Hide();
@@ -200,7 +196,6 @@ namespace Assignment2
 
         private void Form_MouseDown(object sender, MouseEventArgs e) { if (e.Button == MouseButtons.Left) { ReleaseCapture(); SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0); } }
 
-        // KILLS THE ENTIRE APP SO NOTHING RUNS IN THE BACKGROUND
         private void lblClose_Click(object sender, EventArgs e) => Application.Exit();
         private void lblClose_MouseEnter(object sender, EventArgs e) => lblClose.ForeColor = Color.Red;
         private void lblClose_MouseLeave(object sender, EventArgs e) => lblClose.ForeColor = Color.Gray;

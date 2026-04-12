@@ -12,7 +12,6 @@ namespace Assignment2
 {
     public partial class Login : Form
     {
-        // --- DLL IMPORTS FOR WINDOW DRAGGING ---
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -28,7 +27,6 @@ namespace Assignment2
         {
             InitializeComponent();
 
-            // Load the pencil icon from Resources!
             if (Properties.Resources.edit != null)
             {
                 picUser.Image = Properties.Resources.edit;
@@ -41,7 +39,6 @@ namespace Assignment2
             passwordTextBox.Leave += Password_Leave;
         }
 
-        // --- AUTHENTICATION LOGIC ---
         private void usernameTextBox_TextChanged(object sender, EventArgs e)
         {
             username = usernameTextBox.Text;
@@ -78,7 +75,6 @@ namespace Assignment2
             MessageBox.Show("Invalid username or password. Please try again.");
         }
 
-        // --- WINDOW DRAGGING LOGIC ---
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -88,12 +84,10 @@ namespace Assignment2
             }
         }
 
-        // --- CUSTOM X BUTTON LOGIC ---
         private void lblClose_Click(object sender, EventArgs e) => Application.Exit();
         private void lblClose_MouseEnter(object sender, EventArgs e) => lblClose.ForeColor = Color.Red;
         private void lblClose_MouseLeave(object sender, EventArgs e) => lblClose.ForeColor = Color.Gray;
 
-        // --- PLACEHOLDER TEXT LOGIC ---
         private void Username_Enter(object sender, EventArgs e)
         {
             if (usernameTextBox.Text == "Username")
@@ -132,7 +126,6 @@ namespace Assignment2
             }
         }
 
-        // --- CUSTOM UI PAINTING ---
         private void DrawBlueBorder(object sender, PaintEventArgs e)
         {
             Panel pnl = sender as Panel;

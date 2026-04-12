@@ -479,9 +479,8 @@
         private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.TabPage tabTodo;
         private System.Windows.Forms.TabPage tabOverview;
-        private System.Windows.Forms.DataGridView overviewDataGridView; // The new DataGridView
+        private System.Windows.Forms.DataGridView overviewDataGridView; 
 
-        // Left Column
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
@@ -494,7 +493,6 @@
         private System.Windows.Forms.Label lblRoomNo;
         private System.Windows.Forms.TextBox txtRoomNo;
 
-        // Middle Column
         private System.Windows.Forms.GroupBox grpTodo;
         private System.Windows.Forms.Label lblBreakfast;
         private System.Windows.Forms.TextBox txtBreakfast;
@@ -508,7 +506,6 @@
         private System.Windows.Forms.CheckBox chkFoodStatus;
         private System.Windows.Forms.Button btnChangeFood;
 
-        // Right Column
         private System.Windows.Forms.Label lblQueue;
         private System.Windows.Forms.ListBox queueListBox;
         private System.Windows.Forms.Button btnUpdateChanges;
