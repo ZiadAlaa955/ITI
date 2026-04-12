@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="FootballGame/Football_ObserverDP.csproj" />
+  <Project Path="Football_BuilderDP/Football_BuilderDP.csproj" />
+  <Project Path="Football_DecoratorDP/Football_DecoratorDP.csproj" />
+  <Project Path="Football_StrategyDP/Football_StrategyDP.csproj" />
+</Solution>
