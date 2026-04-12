@@ -17,6 +17,7 @@
 *.txt
 *.rar
 *.md
+*.epub
 
 # --- Database Files ---
 *.ldf
@@ -55,6 +56,16 @@ SQL Queries/
 Ignore It/
 bootstrap-5.3.8-dist/
 Capstone project/
+ConsoleApp1/
+D0[1-9]/
+D1[0-9]/
+Day 11/
+node_modules/
+Classwork/
+Material/
+C++ exams/
+Design Pattern Framework 4.0 C# Edition/
+
 
 # --- System ---
 desktop.ini
