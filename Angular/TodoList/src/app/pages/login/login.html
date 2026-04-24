@@ -1,0 +1,63 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <h2 class="auth-title">Login</h2>
+
+    <form class="auth-form" #form="ngForm" (ngSubmit)="checkUser(form)">
+      <div class="form-group">
+        <label for="email" class="form-label">Email Address</label>
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="emailVal"
+          #email="ngModel"
+          id="email"
+          class="form-control"
+          placeholder="scholar@example.com"
+          required
+          email
+        />
+        @if (email.invalid && email.touched && email.hasError('required')) {
+          <p class="error">*Email is required</p>
+        }
+        @if (email.invalid && email.touched && email.hasError('email')) {
+          <p class="error">*Please follow email pattern: "scholar@example.com"</p>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          name="password"
+          ngModel
+          #password="ngModel"
+          id="password"
+          class="form-control"
+          placeholder="************"
+          required
+          minlength="5"
+          maxlength="15"
+        />
+        @if (password.invalid && password.touched && password.hasError('required')) {
+          <p class="error">*Password field is required</p>
+        }
+        @if (password.invalid && password.touched && password.hasError('minlength')) {
+          <p class="error">*Password must be at least 5 characters</p>
+        }
+      </div>
+
+      <button type="submit" class="auth-btn">Login</button>
+
+      @if (form.invalid && form.submitted) {
+        <p class="error">Please fix the highlighted fields above.</p>
+      }
+      @if (errorMessage) {
+        <p class="error">{{ errorMessage }}</p>
+      }
+    </form>
+
+    <div class="auth-footer">
+      <a routerLink="/signup" class="auth-link">Create a new account</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div id="tasklist">
+  <app-tabs [activeTab]="activeTab" (tabChanged)="activeTab = $event"></app-tabs>
+  <div id="todo">
+    @switch (activeTab) {
+      @case ('All') {
+        <h1>All tasks</h1>
+        @for (item of taskList; track item.id) {
+          <app-taskCard
+            [taskInfo]="item"
+            (deleteTask)="deleteTask($event)"
+            (updateTaskEvent)="sendEditRequest($event)"
+          ></app-taskCard>
+        }
+      }
+      @case ('ToDo') {
+        <h1>To Do</h1>
+        @for (item of taskList; track item.id) {
+          @if (item.done == false) {
+            <app-taskCard
+              [taskInfo]="item"
+              (deleteTask)="deleteTask($event)"
+              (updateTaskEvent)="sendEditRequest($event)"
+            ></app-taskCard>
+          }
+        }
+      }
+      @case ('Done') {
+        <h1>Done</h1>
+        @for (item of taskList; track item.id) {
+          @if (item.done == true) {
+            <app-taskCard
+              [taskInfo]="item"
+              (deleteTask)="deleteTask($event)"
+              (updateTaskEvent)="sendEditRequest($event)"
+            ></app-taskCard>
+          }
+        }
+      }
+    }
+  </div>
+</div>

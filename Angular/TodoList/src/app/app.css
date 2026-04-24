@@ -1,0 +1,21 @@
+#main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+app-input {
+  display: block;
+}
+
+app-taskList {
+  display: block;
+  flex-grow: 1;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+}

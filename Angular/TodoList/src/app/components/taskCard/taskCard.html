@@ -1,0 +1,27 @@
+<div id="taskCard">
+  <div id="title-line">
+    <h2 id="title">
+      {{ taskInfo.title }} <span>- {{ taskInfo.category }}</span>
+    </h2>
+
+    <p id="priority" [ngClass]="taskInfo.priority.toLowerCase()">
+      {{ taskInfo.priority }}
+    </p>
+  </div>
+
+  <p id="desc">{{ taskInfo.description }}</p>
+
+  <h3 id="date">{{ taskInfo.date }}</h3>
+
+  <div class="card-actions">
+    <div class="buttons">
+      <button class="btn btn-update" (click)="triggerUpdate()">Update</button>
+      <button class="btn btn-delete" (click)="deleteTaskFromList()">Delete</button>
+    </div>
+
+    <label class="container">
+      <input type="checkbox" [(ngModel)]="taskInfo.done" (change)="toggleStatus()" />
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>

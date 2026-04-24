@@ -1,0 +1,23 @@
+#tasklist {
+  width: 80%;
+  max-width: 1000px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#todo h1 {
+  grid-column: 1 / -1;
+  padding-bottom: 10px;
+  text-align: center;
+  color: darkgray;
+}
+
+#todo {
+  background-color: #f4f1ea;
+  padding: 20px;
+  border-radius: 8px;
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}

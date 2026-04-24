@@ -1,0 +1,17 @@
+<div class="slider">
+  <img id="img-slider" [attr.src]="images[currentIndex]" alt="img" />
+
+  <div id="left-arrow" (click)="prevImage(currentIndex)">
+    <img src="/icons/left-arrow.png" alt="prev" />
+  </div>
+
+  <div id="imgs">
+    @for (img of images; track $index) {
+      <div class="dot" [class.active]="currentIndex == $index" (click)="clickImage($index)"></div>
+    }
+  </div>
+
+  <div id="right-arrow" (click)="nextImage(currentIndex)">
+    <img src="/icons/right-arrow.png" alt="next" />
+  </div>
+</div>

@@ -1,0 +1,171 @@
+#taskCard {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#taskCard h2,
+#taskCard h3,
+#taskCard p {
+  margin: 0;
+}
+
+h2 {
+  display: inline;
+}
+
+#title-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title span {
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+#desc {
+  line-height: 1.4;
+  color: #64748b;
+}
+
+#date {
+  text-align: right;
+  opacity: 0.5;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+#priority {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 4px 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+#priority.high {
+  background-color: #e63946;
+}
+
+#priority.medium {
+  background-color: #f4a261;
+}
+#priority.low {
+  background-color: #2a9d8f;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-update {
+  background-color: #e0e6ed;
+  color: #4a5568;
+}
+
+.btn-update:hover {
+  background-color: #cbd5e1;
+}
+
+.btn-delete {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.btn-delete:hover {
+  background-color: #fca5a5;
+  color: #b91c1c;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  padding-left: 26px; 
+  height: 24px;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #f8fafc;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.container:hover input ~ .checkmark {
+  border-color: #94a3b8;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #388e3c;
+  border-color: #388e3c;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 8px; 
+  top: 4px; 
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

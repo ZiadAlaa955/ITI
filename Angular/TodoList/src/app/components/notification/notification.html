@@ -1,0 +1,13 @@
+@if (ns.message) {
+  <div id="notification" [class]="ns.type">
+    <span class="notify-icon">
+      @if (ns.type === 'success') {
+        ✓
+      }
+      @if (ns.type === 'error') {
+        ✕
+      }
+    </span>
+    <span class="notify-msg">{{ ns.message }}</span>
+  </div>
+}

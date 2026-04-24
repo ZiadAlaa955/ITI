@@ -1,0 +1,22 @@
+<header>
+  <h1>Task Manager</h1>
+  <div id="timer">Timer: {{ seconds }}</div>
+  <div id="navigation">
+    <ul class="navbar-menu">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/add">Add</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/lists">Lists</a>
+      </li>
+
+      <li class="nav-item user-actions">
+        <span class="greeting">Welcome, {{ username }}!</span>
+        <button class="logout-btn" (click)="logout()">Logout</button>
+      </li>
+    </ul>
+  </div>
+</header>

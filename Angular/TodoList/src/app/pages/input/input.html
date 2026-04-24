@@ -1,0 +1,50 @@
+<div class="form-wrapper">
+  <form class="task-form">
+    <h2 class="form-title">{{ editMode ? 'Update task ' : 'Add New Task' }}</h2>
+
+    <input
+      type="text"
+      name="Title"
+      class="custom-input"
+      placeholder="Task Title"
+      [(ngModel)]="task.title"
+    />
+
+    <input
+      type="text"
+      name="Description"
+      class="custom-input"
+      placeholder="Task Description"
+      [(ngModel)]="task.description"
+    />
+
+    <input type="text" name="Tag" class="custom-input" placeholder="Tag" [(ngModel)]="task.tag" />
+
+    <div class="input-row">
+      <select
+        name="Priority"
+        class="custom-select"
+        [(ngModel)]="task.priority"
+        [ngClass]="task.priority.toLowerCase()"
+      >
+        <option value="" disabled selected>Priority</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <select name="Category" class="custom-select" [(ngModel)]="task.category">
+        <option value="" disabled selected>Category</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+      </select>
+    </div>
+
+    <input type="date" name="Date" class="custom-input" [(ngModel)]="task.date" />
+
+    <button type="button" class="submit-btn" (click)="saveTask()">
+      {{ editMode ? 'Save Updates ' : 'Add Task' }}
+    </button>
+  </form>
+</div>
