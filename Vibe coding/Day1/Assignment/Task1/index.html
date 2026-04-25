@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickSort Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 QuickSort Visualizer</h1>
+        <p class="subtitle">Enter numbers separated by commas to sort them</p>
+
+        <div class="input-group">
+            <label for="numberInput">Enter Numbers</label>
+            <input 
+                type="text" 
+                id="numberInput" 
+                placeholder="e.g., 64, 34, 25, 12, 22, 11, 90"
+            >
+            <p class="hint">Enter numbers separated by commas (e.g., 5, 3, 8, 1, 9)</p>
+        </div>
+
+        <button id="sortButton">Sort Numbers</button>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="result-area" id="resultArea">
+            <div class="result-header">Sorted Result:</div>
+            <div class="result-content" id="resultContent"></div>
+        </div>
+
+            <!-- /*
+ * QUICKSORT COMPLEXITY ANALYSIS
+ * =============================
+ * 
+ * TIME COMPLEXITY:
+ * ----------------
+ * • Best Case:   O(n log n) - When pivot divides array into two equal halves
+ * • Average Case: O(n log n) - Random or balanced partitions
+ * • Worst Case:  O(n²) - When pivot is always smallest/largest element
+ *                (already sorted array, sorted in ascending/descending order)
+ * 
+ * SPACE COMPLEXITY:
+ * -----------------
+ * • O(log n) - For the call stack in average case (balanced recursion)
+ * • O(n) - In worst case due to recursion stack depth
+ * 
+ * QUICKSORT vs OTHER ALGORITHMS:
+ * ==============================
+ * 
+ * | Algorithm    | Best       | Average    | Worst      | Space   | Stable |
+ * |--------------|------------|------------|------------|---------|--------|
+ * | QuickSort    | O(n log n) | O(n log n) | O(n²)      | O(log n)|   No   |
+ * | MergeSort    | O(n log n) | O(n log n) | O(n log n) | O(n)    |  Yes   |
+ * | HeapSort     | O(n log n) | O(n log n) | O(n log n) | O(1)    |   No   |
+ * | Array.sort() | O(n log n) | O(n log n) | O(n log n) | O(log n)|  Yes*  |
+ * 
+ * * JavaScript's sort() is stable in modern engines (V8, SpiderMonkey)
+ * 
+ * KEY CHARACTERISTICS:
+ * ====================
+ * 
+ * QuickSort:
+ * ✓ In-place sorting (low space overhead)
+ * ✓ Cache-efficient due to sequential memory access
+ * ✓ Not stable (equal elements may change relative order)
+ * ✓ Excellent for average case scenarios
+ * ✗ Worst-case can degrade to O(n²) - mitigated with random pivot
+ * 
+ * MergeSort:
+ * ✓ Stable sorting algorithm
+ * ✓ Guaranteed O(n log n) performance
+ * ✓ Excellent for linked lists
+ * ✗ Requires O(n) extra space
+ * 
+ * HeapSort:
+ * ✓ Guaranteed O(n log n) time
+ * ✓ In-place (O(1) space)
+ * ✗ Not cache-friendly (non-sequential access)
+ * ✗ Not stable
+ * 
+ * JavaScript Array.sort():
+ * ✓ Optimized implementation (typically TimSort or MergeSort)
+ * ✓ Stable in modern browsers
+ * ✓ Handles edge cases gracefully
+ * ✓ Accepts custom comparison function
+ * 
+ * RECOMMENDATION:
+ * ===============
+ * For general-purpose sorting in JavaScript, use the built-in 
+ * Array.prototype.sort() - it's optimized, stable, and handles 
+ * edge cases. Implement QuickSort for learning purposes or when
+ * in-place sorting with minimal memory overhead is critical.
+ */ -->
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+        <div class="result-area" id="resultArea">
+            <div class="result-header">Sorted Result:</div>
+            <div class="result-content" id="resultContent"></div>
+        </div>
+
+        </div>
+
+</body>
+</html>

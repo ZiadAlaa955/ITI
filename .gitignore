@@ -3,6 +3,7 @@
 *.png
 *.jpg
 *.svg
+*.jpeg
 *.gif
 *.json
 *.mp4
@@ -65,6 +66,8 @@ Classwork/
 Material/
 C++ exams/
 Design Pattern Framework 4.0 C# Edition/
+**/npm/
+**/node-modules/
 
 
 # --- System ---
