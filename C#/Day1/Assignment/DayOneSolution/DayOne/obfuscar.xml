@@ -1,0 +1,9 @@
+﻿<?xml version='1.0'?>
+<Obfuscator>
+	<Var name="InPath" value="." />
+	<Var name="OutPath" value=".\Obfuscated" />
+	<Var name="KeepPublicApi" value="false" />
+	<Var name="HideStrings" value="true" />
+
+	<Module file="$(InPath)\DayOne.dll" />
+</Obfuscator>

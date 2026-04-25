@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "title": "c++",
+      "description": "study C++ 5 hours",
+      "priority": "High",
+      "category": "Study",
+      "done": true,
+      "tag": "#Study",
+      "date": "2026-04-25",
+      "id": "quPX1Z_1CFA",
+      "userId": "7jVc9U-EkaY"
+    }
+  ],
+  "users": [
+    {
+      "email": "ziadElmardeny123@gmail.com",
+      "username": "Ziad",
+      "password": "123456",
+      "id": "7jVc9U-EkaY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

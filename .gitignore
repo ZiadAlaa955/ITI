@@ -2,10 +2,8 @@
 *.pdf
 *.png
 *.jpg
-*.svg
 *.jpeg
 *.gif
-*.json
 *.mp4
 *.mp3
 *.xlsx
@@ -13,12 +11,9 @@
 *.doc
 *.ppt
 *.pptx
-*.htm
-*.xml
-*.txt
 *.rar
-*.md
 *.epub
+*.txt
 
 # --- Database Files ---
 *.ldf
@@ -27,7 +22,8 @@
 *.bak
 *.ss
 
-# --- IDE & Build Junk ---
+# --- IDE, Build Junk & Configs ---
+.vscode/mcp.json
 *.layout
 *.depend
 *.o
@@ -43,6 +39,15 @@
 *.pch
 *.bmarks
 *.sqlproj.user
+*.user
+
+# --- Frameworks & Security (Node, Angular, .NET) ---
+.env
+.env.*
+.angular/
+dist/
+out-tsc/
+coverage/
 
 # --- Folders ---
 practice/
@@ -51,8 +56,8 @@ x86/
 .vs/
 Debug/
 Release/
-bin/
-obj/
+**/bin/
+**/obj/
 SQL Queries/
 Ignore It/
 bootstrap-5.3.8-dist/
@@ -61,15 +66,14 @@ ConsoleApp1/
 D0[1-9]/
 D1[0-9]/
 Day 11/
-node_modules/
+**/node_modules/
 Classwork/
 Material/
 C++ exams/
 Design Pattern Framework 4.0 C# Edition/
 **/npm/
-**/node-modules/
-
 
 # --- System ---
 desktop.ini
 Thumbs.db
+.DS_Store
