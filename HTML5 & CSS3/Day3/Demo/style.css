@@ -1,6 +1,0 @@
-  input.c1:valid+span{
-            display: none;
-        }
-        input.c1:invalid+span{
-            display: inline;
-        }
