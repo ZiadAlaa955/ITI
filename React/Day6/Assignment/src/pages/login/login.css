@@ -1,0 +1,103 @@
+.tech-login-wrapper {
+  min-height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.tech-login-card {
+  background-color: var(--bg-card);
+  width: 100%;
+  max-width: 440px;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.tech-login-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin: 0 0 15px 0;
+}
+
+.tech-login-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0 0 30px 0;
+}
+
+.tech-login-error-alert {
+  background-color: var(--error-bg);
+  color: var(--error-color);
+  border: 1px solid var(--error-color);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-login-form {
+  display: flex;
+  flex-direction: column;
+}
+.tech-login-input-group {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.tech-login-input-field {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: var(--bg-input);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--text-primary);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.tech-login-input-field::placeholder {
+  color: var(--text-secondary);
+}
+.tech-login-input-field:focus {
+  border-color: var(--accent-cyan);
+}
+
+.tech-login-password-toggle-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.tech-login-submit-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--btn-gradient);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tech-login-signup-text {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: var(--text-secondary);
+}
+
+.tech-login-signup-link {
+  color: var(--accent-cyan);
+  font-weight: 700;
+  margin-left: 5px;
+}

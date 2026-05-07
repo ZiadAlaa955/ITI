@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "headline": "The Future of Cross-Platform: Why TypeScript is Winning",
+      "category": "Mobile Dev",
+      "image": "https://images.unsplash.com/photo-1659673565033-be6d2fb82949?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A deep dive into how modern cross-platform frameworks are leveraging TypeScript to build enterprise-grade mobile applications faster than ever.\n\n",
+      "article": "The mobile development landscape is undergoing a massive shift. While native development holds its ground for highly specialized tasks, cross-platform frameworks have matured to a point where they are the default choice for most modern applications.\n\nThe real hero of this transition isn't just the frameworks themselves, but the widespread adoption of TypeScript. By bringing strong typing, advanced OOP principles, and robust architecture to the JavaScript ecosystem, developers can build scalable, maintainable mobile apps without the historical overhead of older languages. With tools continuously improving, the barrier between web and mobile development is thinner than ever, allowing engineers to deploy seamlessly across iOS and Android from a single, reliable codebase.\n",
+      "author": "Alex Mercer",
+      "date": "May 7, 2026",
+      "id": "XJTlssaSkpY"
+    },
+    {
+      "headline": "Next-Gen RAG Systems: Powering Autonomous AI Agents",
+      "category": "Artificial Intelligence",
+      "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "How Retrieval-Augmented Generation (RAG) is moving beyond simple chatbots to manage complex, real-world data platforms.\n",
+      "article": "Artificial Intelligence is rapidly evolving from conversational interfaces to proactive management tools. The key driver behind this leap is the advancement of Retrieval-Augmented Generation (RAG) paired with sophisticated AI agents like LlamaIndex and LangChain.\n\nInstead of relying solely on pre-trained knowledge, modern AI systems can now dynamically retrieve facility-specific data—from sensor readings to complex scheduling systems—and use that context to make real-time, accurate decisions. This means AI can now act as a smart management platform, capable of monitoring infrastructure, optimizing workflows, and dramatically reducing human oversight in large-scale operations.",
+      "author": "Dr. Elena Rostova",
+      "date": "May 7, 2026",
+      "id": "bgpd63oz1IQ"
+    },
+    {
+      "headline": "The Physical Games Renaissance: Why Discs are Becoming Premium Assets",
+      "category": "Gaming",
+      "image": "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "As digital downloads dominate the market, physical game discs are transforming from standard media into highly sought-after collector's items.",
+      "article": "\nIt is no secret that the video game industry is pushing heavily toward an all-digital future. However, a fascinating counter-trend has emerged: the physical games market is experiencing a renaissance among collectors and dedicated gamers.\n\nSpecific region releases, rare titles, and pristine condition copies for the PlayStation and Xbox ecosystems are seeing their valuations climb. Much like vinyl records in the music industry, physical game discs are no longer just a way to play a game; they are tangible assets. For traders and collectors, maintaining a curated inventory of physical media has become a lucrative venture, proving that even in a digital age, gamers still place a premium on true ownership.",
+      "author": "Julian Vossen",
+      "date": "May 7, 2026",
+      "id": "yrIL4xvcDyQ"
+    }
+  ],
+  "users": [
+    {
+      "fullName": "Ziad Alaa Ezzat",
+      "email": "ziadElmardeny123@gmail.com",
+      "password": "123456",
+      "id": "Dsxz5g1Q2zM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

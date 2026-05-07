@@ -1,0 +1,28 @@
+.latest-news-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.search-wrapper {
+  flex-shrink: 0;
+}
+
+.list-headline {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--text-primary);
+}
