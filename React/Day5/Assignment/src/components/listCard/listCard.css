@@ -1,0 +1,29 @@
+.list-card .list-headline {
+  font-size: 40px;
+  font-weight: 900;
+  color: #dae2fd;
+}
+
+.cards-grid {
+  display: grid;
+  /* This creates exactly 3 equal columns */
+  grid-template-columns: repeat(3, 1fr);
+  /* Reduced from 150px to a much cleaner, more proportional gap */
+  gap: 40px;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* On medium screens (tablets), switch to 2 cards per row */
+@media (max-width: 950px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* On small screens (phones), switch to 1 card per row */
+@media (max-width: 650px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

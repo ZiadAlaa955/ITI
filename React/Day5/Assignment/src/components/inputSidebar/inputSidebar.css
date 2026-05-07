@@ -1,0 +1,110 @@
+.sidebar {
+  background-color: #161d31;
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  height: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #bbc9cf;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  color: white;
+  background-color: #0b1326;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.form-group input {
+  height: 48px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00d2ff;
+  box-shadow: 0 0 0 2px rgba(0, 210, 255, 0.15);
+  background-color: #1a2235;
+}
+
+::placeholder {
+  color: #5c626a;
+  font-weight: 500;
+}
+
+.sidebar .submit-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #10c6ff 0%, #a020f0 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition:
+    transform 0.1s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sidebar .submit-btn:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 5px 15px rgba(160, 32, 240, 0.3);
+}
+
+.sidebar .submit-btn:active {
+  transform: scale(0.98);
+}
+
+.form-group textarea::-webkit-scrollbar {
+  width: 8px;
+}
+.form-group textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+.form-group textarea::-webkit-scrollbar-thumb {
+  background: #3c494e;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: none;
+}

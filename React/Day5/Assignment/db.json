@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "headline": "Revolutionary OS Update Announced",
+      "category": "Software",
+      "description": "The highly anticipated operating system update promises a completely redesigned UI and a 40% boost to battery life on mobile devices.",
+      "image": "https://i.pinimg.com/1200x/90/98/18/9098181fbeccca2f391f759c3b43b7ca.jpg",
+      "id": "QIZ4AGTa00Y"
+    },
+    {
+      "headline": "test",
+      "category": "aaaaaa",
+      "description": "asdas",
+      "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "zP_TD8FgBXU"
+    },
+    {
+      "headline": "asd",
+      "category": "ddddd",
+      "description": "dddddddddddddddsaaaaaadddddddddddddddsaaaaaadddddddddddddddsaaaaaadddddddddddddddsaaaaaa",
+      "image": "ddddd",
+      "id": "TyrIEhHGJe4"
+    },
+    {
+      "headline": "aaaaaaaaaa",
+      "category": "aaaaaaaaaaa",
+      "description": "aaaaaaaaaaaaaaaa",
+      "image": "aaaaaaaaaaa",
+      "id": "grNAnk0fo7Q"
+    },
+    {
+      "headline": "fggggggggggggggggg",
+      "category": "gggggggggggggggg",
+      "description": "gggggggfgggggggfgggggggfgggggggfgggggggfgggggggfgggggggf",
+      "image": "https://i.pinimg.com/1200x/90/98/18/9098181fbeccca2f391f759c3b43b7ca.jpg",
+      "id": "WoR_ILFg-a4"
+    },
+    {
+      "headline": "",
+      "category": "",
+      "description": "",
+      "image": "",
+      "id": "9a7fPZtc1wE"
+    },
+    {
+      "headline": "Next-Gen Solid-State Batteries Crack the 1000-Mile Range Barrier",
+      "category": "Hardware",
+      "description": "A major breakthrough in solid-state battery architecture promises to double the range of modern electric vehicles while slashing charging times to under ten minutes.",
+      "image": "https://images.unsplash.com/photo-1760539165601-7b6cf75bead7?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "qLQaIPXVh88"
+    },
+    {
+      "headline": "Next-Gen Solid-State Batteries Crack the 1000-Mile Range Barrier",
+      "category": "Hardware",
+      "description": "A major breakthrough in solid-state battery architecture promises to double the range of modern electric vehicles while slashing charging times to under ten minutes.",
+      "image": "https://images.unsplash.com/photo-1760539165601-7b6cf75bead7?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "yUIMXGtnV5I"
+    },
+    {
+      "headline": "Next-Gen Solid-State Batteries Crack the 1000-Mile Range Barrier",
+      "category": "Hardware",
+      "image": "https://images.unsplash.com/photo-1760539165601-7b6cf75bead7?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "A major breakthrough in solid-state battery architecture promises to double the range of modern electric vehicles while slashing charging times to under ten minutes.",
+      "article": "For years, the electric vehicle (EV) industry has been chasing the holy grail of energy storage: the solid-state battery. Today, a coalition of researchers out of MIT and advanced hardware startup QuantumCell announced they have successfully stabilized a lithium-metal solid-state prototype capable of delivering a 1,000-mile range on a single charge.\n\nThe breakthrough comes from replacing the traditional flammable liquid electrolyte with a novel ceramic-polymer composite. This not only dramatically increases energy density but completely eliminates the risk of thermal runaway (battery fires).\n\n\"We've effectively removed the safety bottlenecks that kept energy density artificially low,\" said Dr. Aris Thorne, Lead Engineer at QuantumCell. \"By utilizing this new ceramic lattice, we can pack lithium ions tighter than ever before, while supporting ultra-fast 800V charging architectures.\"\n\nIn practical terms, this means an EV equipped with this technology could drive from New York to Chicago without stopping to recharge. When it does need power, a 10% to 80% charge takes just under eight minutes. \n\nWhile commercial production in passenger vehicles is still likely 3 to 5 years away, QuantumCell confirmed they have already signed pilot testing agreements with two major European automakers for late 2025.",
+      "author": "Elena Rodriguez",
+      "date": "May 5, 2026",
+      "id": "Zj10duK7eN0"
+    }
+  ],
+  "users": [
+    {
+      "fullName": "Ziad Alaa Ezzat",
+      "email": "ziadElmardeny123@gmail.com",
+      "password": "123456",
+      "id": "tmQ6NdQfK0I"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

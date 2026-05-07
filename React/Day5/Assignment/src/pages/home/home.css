@@ -1,0 +1,40 @@
+.home-container {
+  padding: 40px 20px;
+  text-align: center;
+  color: #ffffff; /* Assumes you are using a dark background globally */
+}
+
+.welcome-section {
+  margin-bottom: 40px;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  color: #8b949e;
+  font-size: 1.1rem;
+}
+
+.slider-section {
+  width: 100%;
+  max-width: 1000px; /* Keeps the slider from stretching too far */
+  margin: 0 auto; /* Centers the slider */
+}
+
+/* You can delete this placeholder rule once you put your real slider in! */
+.placeholder-slider {
+  padding: 100px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  color: #8b949e;
+}
+
+.username {
+  background: linear-gradient(90deg, #10c6ff 0%, #a020f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}

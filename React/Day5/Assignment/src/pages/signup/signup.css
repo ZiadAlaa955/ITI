@@ -1,0 +1,162 @@
+/* Unique Prefixed CSS to prevent ALL global conflicts */
+
+.tech-signup-wrapper {
+  min-height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.tech-signup-card {
+  background-color: #161b22;
+  width: 100%;
+  max-width: 460px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-signup-top-accent {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #10c6ff 0%, #a020f0 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Perfected padding that cannot be overwritten */
+.tech-signup-inner-content {
+  padding: 50px 40px 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-signup-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 15px 0;
+  letter-spacing: -0.5px;
+}
+
+.tech-signup-subtitle {
+  color: #8b949e;
+  font-size: 0.95rem;
+  margin: 0 0 30px 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.tech-signup-error-alert {
+  background-color: rgba(255, 75, 75, 0.1);
+  color: #ff4b4b;
+  border: 1px solid rgba(255, 75, 75, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.tech-signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-signup-input-group {
+  margin-bottom: 20px;
+}
+
+.tech-signup-input-field {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  outline: none;
+}
+
+.tech-signup-input-field::placeholder {
+  color: #8b949e;
+  font-weight: 500;
+}
+
+.tech-signup-input-field:focus {
+  border-color: #00d2ff;
+  box-shadow: 0 0 0 2px rgba(0, 210, 255, 0.2);
+}
+
+.tech-signup-input-error {
+  border-color: #ff4b4b !important;
+  box-shadow: 0 0 0 2px rgba(255, 75, 75, 0.2) !important;
+}
+
+.tech-signup-submit-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition:
+    transform 0.1s,
+    box-shadow 0.2s,
+    filter 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tech-signup-gradient-btn {
+  background: linear-gradient(90deg, #10c6ff 0%, #a020f0 100%);
+}
+
+.tech-signup-submit-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 5px 15px rgba(160, 32, 240, 0.4);
+}
+
+.tech-signup-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.tech-signup-login-prompt {
+  margin-top: 35px;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: #8b949e;
+  font-weight: 500;
+}
+
+.tech-signup-login-link {
+  color: #00d2ff;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 5px;
+  transition: filter 0.2s;
+}
+
+.tech-signup-login-link:hover {
+  filter: brightness(1.2);
+  text-decoration: underline;
+}

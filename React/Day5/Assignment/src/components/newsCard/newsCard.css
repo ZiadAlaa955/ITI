@@ -1,0 +1,155 @@
+.card {
+  background-color: #161d31;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100%;
+}
+
+.card-content .cardImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  margin: 0 !important;
+}
+
+.category-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(22, 29, 48, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(22, 29, 48, 0.25);
+  color: rgba(215, 217, 216, 0.9);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin: 0;
+  z-index: 2;
+  cursor: default;
+}
+
+.content {
+  padding: 20px 25px 25px 25px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardDetails {
+  flex-grow: 1;
+}
+
+.content h3 {
+  font-size: 25px;
+  font-weight: 900;
+  color: white;
+}
+
+.content p {
+  font-size: 15px;
+  color: #98a6ac;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content hr {
+  margin-right: 20px;
+  margin-top: 15px;
+  border: none;
+  opacity: 0.5;
+  border-top: 1px solid #333;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.like,
+.dislike {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #8b9eb0;
+  font-weight: 600;
+}
+
+.dislikeIcon {
+  margin-top: 5px;
+}
+
+.likeIcon,
+.dislikeIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.like.active-like {
+  color: #00d2ff;
+}
+
+.dislike.active-dislike {
+  color: #ff4b4b;
+}
+
+.like:hover {
+  color: #00d2ff;
+}
+
+.dislike:hover {
+  color: #ff4b4b;
+}
+
+.details-btn {
+  margin-left: auto;
+  background: linear-gradient(90deg, #10c6ff 0%, #a020f0 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.1s,
+    box-shadow 0.2s,
+    filter 0.2s;
+}
