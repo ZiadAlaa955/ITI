@@ -1,0 +1,16 @@
+.list-card .list-headline {
+  font-size: 40px;
+  font-weight: 900;
+  color: #dae2fd;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
