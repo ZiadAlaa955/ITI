@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "image": "public/AI.jfif",
+      "category": "Hardware",
+      "headline": "Next-Gen GPU Unveiled",
+      "description": "The latest graphics processing unit has been unveiled, promising unprecedented performance.",
+      "id": "-Mr96d8C9GE"
+    },
+    {
+      "image": "public/Artificial-intelligence.jfif",
+      "category": "Artificial Intelligence",
+      "headline": "New AI Model Released",
+      "description": "A groundbreaking new language model has been released, promising to revolutionize natural language processing.",
+      "id": "EQg1602RCRA"
+    },
+    {
+      "image": "public/Blue-technology.jfif",
+      "category": "Software",
+      "headline": "New OS Version Announced",
+      "description": "The latest version of the popular operating system has been announced, featuring enhanced security and performance.",
+      "id": "78TiG5YJWTc"
+    },
+    {
+      "headline": "Revolutionary OS Update Announced",
+      "category": "Software",
+      "description": "The highly anticipated operating system update promises a completely redesigned UI and a 40% boost to battery life on mobile devices.",
+      "image": "https://i.pinimg.com/1200x/90/98/18/9098181fbeccca2f391f759c3b43b7ca.jpg",
+      "id": "QIZ4AGTa00Y"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
