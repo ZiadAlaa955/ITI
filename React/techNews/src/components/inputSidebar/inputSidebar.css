@@ -1,0 +1,64 @@
+.sidebar {
+  background-color: var(--bg-card);
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  border: 1px solid var(--border-color);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  color: var(--text-primary);
+  background-color: var(--bg-input);
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-cyan);
+}
+
+::placeholder {
+  color: var(--text-secondary);
+}
+
+.sidebar .submit-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: var(--btn-gradient);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
