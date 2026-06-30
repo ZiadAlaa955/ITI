@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "185880158083",
+    "project_id": "tech-company-portal",
+    "storage_bucket": "tech-company-portal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185880158083:android:39a9cf0a8978c91aef20b6",
+        "android_client_info": {
+          "package_name": "com.example.assignment_d05"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-jk36GsynuWlY0j4DMUzJx91JV4g-Xm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
